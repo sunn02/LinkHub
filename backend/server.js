@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const connectDB = require('./config/db'); // Importar la función de conexión
 const linksRoutes = require('./routes/linksRoutes'); // Importar las rutas de tags
-const tagsRoutes = require('./routes/tagsRoutes'); // Importar las rutas de tags
 const commentsRoutes = require('./routes/commentsRoutes')
 const app = express();
 

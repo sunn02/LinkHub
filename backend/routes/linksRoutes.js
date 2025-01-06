@@ -10,7 +10,7 @@ router.delete('/:id', linksController.deletelink);
 
 
 // Ruta para obtener enlaces por tagId
-router.get('/tags/:tagId', linksController.getLinksbyTag);
+router.get('/tags/:tag', linksController.getLinksbyTag);
 
 router.put('/vote/:id', linksController.votelink);
 
