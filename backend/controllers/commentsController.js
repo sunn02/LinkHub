@@ -3,7 +3,7 @@ const Link = require('../models/linksModel');
 
 exports.createComment = async(req, res) => {
     const { linkId } = req.params;
-    const { content } = req.body; // El texto del comentario
+    const { content } = req.body; 
 
     try {
         const link = await Link.findById(linkId);

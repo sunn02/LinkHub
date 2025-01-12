@@ -4,6 +4,7 @@ const linksController = require('../controllers/linksController');
 
 // Rutas para los links
 router.get('/', linksController.getAllLinks);
+router.get('/:id', linksController.getlink);
 router.post('/', linksController.createlink);
 router.put('/:id', linksController.updatelink);
 router.delete('/:id', linksController.deletelink);

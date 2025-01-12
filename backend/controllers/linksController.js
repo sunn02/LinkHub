@@ -34,7 +34,17 @@ exports.createlink = async (req, res) => {
     }
   };
   
-
+exports.getlink = async (req, res) => {
+  try {
+    const link = await Link.findById(req.params.id).populate('tags');
+    if (!link) { 
+      return res.status(404).json({ error: 'Enlace no encontrado' });
+    }
+    res.json(link);
+    } catch (error) {
+      console.error('Error al obtener el enlace:', error);
+    }
+}
 
 // Actualizar un enlace existente
 exports.updatelink = async(req, res) => {
